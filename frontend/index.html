@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Playlist Merger</title>
+    <link rel="stylesheet" href="/frontend/style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <h1>Spotify Playlist Merger</h1>
+        <p>Combine multiple playlists into one clean, deduplicated mix.</p>
+      </header>
+
+      <section class="panel controls" id="authSection">
+        <button id="loginButton" class="spotify-btn">Login with Spotify</button>
+      </section>
+
+      <section class="panel hidden" id="playlistSection">
+        <div class="section-head">
+          <h2>Your Playlists</h2>
+          <span id="selectedCount">0 selected</span>
+        </div>
+
+        <div id="statusMessage" class="status hidden"></div>
+
+        <label class="field">
+          New playlist name
+          <input id="playlistName" type="text" value="Merged Playlist" maxlength="100" />
+        </label>
+
+        <div id="playlists" class="playlist-grid"></div>
+
+        <div class="actions">
+          <button id="mergeButton" class="merge-btn" disabled>Merge Playlists</button>
+        </div>
+
+        <div id="loader" class="loader hidden">
+          <div class="spinner"></div>
+          <p>Merging playlists…</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="/frontend/app.js"></script>
+  </body>
+</html>
